@@ -52,8 +52,8 @@ def get_average():
     seconds = math.floor(seconds_milliseconds)
     milliseconds = (seconds_milliseconds - seconds)
     print(minutes, seconds, int(milliseconds*10))
-    return ":".join([str(int(minutes)), str(seconds), str(int(milliseconds*10))])
-
+    m_s =  ":".join([str(int(minutes)), str(seconds)])
+    return ".".join([m_s, str(int(milliseconds*10))])
 
 if __name__ == "__main__":
     print(get_average())
